@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nivvayasa – Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Fonts & Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      background: linear-gradient(135deg, #111, #333);
+      padding: 15px 5%;
+    }
+    .navbar-brand {
+      color: #f8d21a !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #f8d21a !important;
+    }
+
+    /* ===== Header ===== */
+    .contact-header {
+      background: linear-gradient(120deg, #1b1b1b, #2b2b2b);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 80px;
+      background-attachment: fixed;
+      position: relative;
+    }
+    .contact-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #f8d21a;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    .contact-header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    /* ===== Contact Info Section ===== */
+    .contact-section {
+      padding: 80px 10%;
+    }
+    .contact-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 40px;
+      transition: transform 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+    .contact-card h4 {
+      color: #111;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .contact-card p {
+      color: #555;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    /* ===== Form Styling ===== */
+    form input, form textarea {
+      border-radius: 10px !important;
+      border: 1px solid #ccc !important;
+      padding: 12px 15px;
+      font-size: 1rem;
+    }
+    form textarea {
+      height: 120px;
+      resize: none;
+    }
+    form .btn {
+      background: linear-gradient(135deg, #f8d21a, #d4b000);
+      border: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 10px;
+      padding: 12px;
+      transition: all 0.3s ease;
+    }
+    form .btn:hover {
+      background: linear-gradient(135deg, #d4b000, #f8d21a);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      margin-top: 80px;
+    }
+    footer a {
+      color: #f8d21a;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: white;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .contact-header h1 {
+        font-size: 2rem;
+      }
+      .contact-section {
+        padding: 60px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a href="#" class="navbar-brand">NIVVAYASA</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <div class="navbar-nav ml-auto">
+        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <a href="projects.html" class="nav-item nav-link">Projects</a>
+        <a href="team.html" class="nav-item nav-link">Team</a>
+        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Header Section ===== -->
+  <div class="contact-header">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you — let’s build something great together.</p>
+  </div>
+
+  <!-- ===== Contact Section ===== -->
+  <div class="contact-section container">
+    <div class="row">
+
+      <div class="col-md-6 mb-4">
+        <div class="contact-card">
+          <h4>Corporate Office</h4>
+          <p>Address:#8 , ‘Siri gowri’ , 4th b cross , mahalaxmi nagar, bhatawade,Tumkur. Landmark: near mirgi petrol bunk, bhatawade. District:Tumkur City:Tumkur Pincode:572102 State:Karnataka contact no.:+91 81976 70731<br></p>
+          <p><strong>Email:</strong> nivvyaasaa.developers@gmail.com</p>
+          <p><strong>Phone:</strong> +91 81976 70731</p>
+          <hr>
+          <p><strong>Working Hours:</strong><br>Mon - Sat: 9:30 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="contact-card">
+          <h4>Send Us a Message</h4>
+          <form>
+            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+            <input type="email" class="form-control mb-3" placeholder="Email" required>
+            <textarea class="form-control mb-3" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-block">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Nivvayasa Developers. All rights reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent real submission
+  const name = document.querySelector('input[placeholder="Your Name"]').value;
+  const email = document.querySelector('input[placeholder="Email"]').value;
+  const message = document.querySelector('textarea').value;
+
+  if (name && email && message) {
+    alert("✅ Thank you, " + name + "! Your message has been sent successfully.");
+    this.reset();
+  } else {
+    alert("⚠️ Please fill in all fields before submitting.");
+  }
+});
+</script>
+    <script src="js/main.js"></script>
+</body>
+</html>
