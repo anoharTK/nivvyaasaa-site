@@ -1,20 +1,115 @@
-<!-- ✅ NAVBAR WITH YOUR HREF LINKS -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
-    <div class="container-fluid px-lg-5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivvayasa – About</title>
 
-        <!-- Mobile brand name -->
-        <a href="index.html" class="navbar-brand d-lg-none">NIVVYASASAA</a>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <!-- Mobile menu button -->
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #0c0c0c !important;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        .navbar-nav .nav-link {
+            color: #e0e0e0 !important;
+            font-weight: 500;
+            padding: 8px 18px;
+            transition: 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700 !important;
+        }
+        .navbar-nav .active {
+            color: #ffd700 !important;
+            font-weight: 600;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            text-align: center;
+            color: #ffd700;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        /* ABOUT SECTION */
+        .about-section {
+            padding: 60px 20px;
+            background: #000;
+        }
+
+        .about-card {
+            background: rgba(20, 20, 20, 0.85);
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.18);
+            box-shadow: 0px 0px 18px rgba(255, 215, 0, 0.1);
+            transition: 0.4s;
+            backdrop-filter: blur(6px);
+        }
+
+        .about-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.25);
+            border-color: #ffd700;
+        }
+
+        /* IMAGE STYLING */
+        .about-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            box-shadow: 0px 0px 12px rgba(255, 215, 0, 0.15);
+        }
+
+        /* FADE IN ANIMATION */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(25px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand text-warning font-weight-bold" href="index.html">Nivvayasa</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Menu Links -->
         <div class="collapse navbar-collapse" id="menu">
-            <div class="navbar-nav ml-auto text-center">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+            <div class="navbar-nav ml-auto">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link active">About</a>
                 <a href="projects.html" class="nav-item nav-link">Projects</a>
                 <a href="team.html" class="nav-item nav-link">Team</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -23,178 +118,59 @@
     </div>
 </nav>
 
-
-
-<!-- ✅ PREMIUM UPGRADED ABOUT SECTION (FULLY RESPONSIVE + FIXED IMAGES) -->
+<!-- ABOUT SECTION -->
 <section class="about-section">
     <div class="container">
+        <h2 class="section-title fade-in">About Nivvayasa Developers & Builders</h2>
 
-        <h2 class="section-title">About Nivvayasa Developers & Builders</h2>
+        <div class="row">
 
-        <!-- Block 1 -->
-        <a href="about.html" class="about-link">
-            <div class="about-block premium-card fade-up">
-                <div class="about-img-wrapper">
-                    <img src="images/MCN.jpg" alt="About Nivvayasa" class="about-img">
-                </div>
-                <div class="about-text">
-                    <h3 class="about-title">Who We Are</h3>
-                    <p>
-                        Nivvayasa Developers & Builders, established in 2023, is one of the fastest-growing
-                        real estate companies known for trust, transparency, and strong planning. Our pilot 
-                        project in Bangalore Rural – Nelamangala, spread across 12+ acres of fully converted 
-                        residential land in Sondekoppa, was sold out completely in a record time.
-                    </p>
+            <!-- IMAGE -->
+            <div class="col-md-6 mb-4 fade-in">
+                <img src="images/MCN.jpg" class="about-img" alt="Nivvayasa">
+            </div>
+
+            <!-- TEXT -->
+            <div class="col-md-6 fade-in">
+                <div class="about-card">
+                    <p>Nivvayasa Developers & Builders, established in 2023, is one of the fastest-growing and trusted real estate brands in Karnataka.</p>
+
+                    <p>We successfully launched our pilot project in Bangalore Rural – a premium 12+ acre converted residential layout in Sondekoppa, Nelamangala. The entire project was sold out in record time.</p>
+
+                    <p>Currently, we are executing multiple high-value projects across Karnataka, with our flagship ongoing project in SIRA. Bookings are now open and filling fast due to high demand and excellent connectivity.</p>
+
+                    <p>At Nivvayasa, we focus on transparency, quality development, clear titles, and premium customer experience — ensuring long-term value for every client who becomes part of our journey.</p>
+
+                    <p>We are committed to delivering luxury-grade layouts, sustainable planning, and future-ready infrastructures that redefine residential living.</p>
                 </div>
             </div>
-        </a>
+        </div>
 
-        <!-- Block 2 -->
-        <a href="projects.html" class="about-link">
-            <div class="about-block premium-card fade-up">
-                <div class="about-img-wrapper">
-                    <img src="images/Logo.jpg" alt="Projects" class="about-img">
-                </div>
-                <div class="about-text">
-                    <h3 class="about-title">Our Current Projects</h3>
-                    <p>
-                        We are now developing multiple layouts with efficient planning and absolute legal clarity.
-                        Our latest premium plotted development in SIRA is open for booking — demand is extremely fast.
-                        Nivvayasa continues to deliver safe, valuable and future-ready real-estate investments.
-                    </p>
+        <div class="row mt-4">
+
+            <!-- SECOND IMAGE -->
+            <div class="col-md-6 mb-4 fade-in">
+                <img src="images/Logo.jpg" class="about-img" alt="Nivvayasa Project">
+            </div>
+
+            <!-- SECOND TEXT -->
+            <div class="col-md-6 fade-in">
+                <div class="about-card">
+                    <p>With strong market confidence and growing investor trust, Nivvayasa continues to expand rapidly with new projects, strategic land development, and long-term vision for urban lifestyle enhancement.</p>
+
+                    <p>Our dedicated team ensures every project follows premium standards, government regulations, and top-tier design quality.</p>
+
+                    <p>Your dream plot, your future investment — Nivvayasa makes it happen with integrity and excellence.</p>
                 </div>
             </div>
-        </a>
+        </div>
 
     </div>
 </section>
 
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- ✅ PREMIUM CSS (no image chopping + luxury design) -->
-<style>
-/* SECTION BACKGROUND */
-.about-section {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #f2f4f7, #ffffff);
-}
-
-/* TITLE */
-.section-title {
-    font-size: 32px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 45px;
-    color: #202020;
-}
-
-/* LINK STYLE */
-.about-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* CARD */
-.premium-card {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(6px);
-    border-radius: 16px;
-    padding: 25px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border: 1px solid rgba(255,255,255,0.6);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-/* GOLD GLASS SHINE */
-.premium-card::after {
-    content: "";
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 250%;
-    height: 250%;
-    background: linear-gradient(120deg, transparent, rgba(255,215,0,0.22), transparent);
-    transform: rotate(25deg);
-    transition: all 0.8s ease;
-    opacity: 0;
-}
-
-/* HOVER EFFECT */
-.premium-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 14px 40px rgba(0,0,0,0.15);
-}
-
-.premium-card:hover::after {
-    top: 0%;
-    left: 0%;
-    opacity: 1;
-}
-
-/* ✅ IMAGE FIX — NO CROPPING */
-.about-img-wrapper {
-    width: 100%;
-    max-height: 280px;
-    overflow: hidden;
-    border-radius: 14px;
-}
-
-.about-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* ✅ prevents cropping */
-    background: #f5f5f5;
-    border-radius: 14px;
-}
-
-/* TEXT */
-.about-title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.about-text p {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #444;
-}
-
-/* DESKTOP VERSION */
-@media (min-width: 768px) {
-    .premium-card {
-        flex-direction: row;
-    }
-    .about-img-wrapper {
-        width: 42%;
-        max-height: 240px;
-    }
-    .about-text {
-        width: 58%;
-    }
-    .about-title {
-        font-size: 24px;
-    }
-    .about-img {
-        object-fit: contain; /* ✅ ensures full image visibility */
-    }
-}
-
-/* FADE-UP ANIMATION */
-.fade-up {
-    opacity: 0;
-    transform: translateY(25px);
-    animation: fadeUp 1s ease forwards;
-}
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-</style>
+</body>
+</html>
