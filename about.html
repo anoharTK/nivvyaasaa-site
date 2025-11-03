@@ -1,3 +1,31 @@
+<!-- ✅ NAVBAR WITH YOUR HREF LINKS -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+    <div class="container-fluid px-lg-5">
+
+        <!-- Mobile brand name -->
+        <a href="index.html" class="navbar-brand d-lg-none">NIVVYASASAA</a>
+
+        <!-- Mobile menu button -->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Links -->
+        <div class="collapse navbar-collapse" id="menu">
+            <div class="navbar-nav ml-auto text-center">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="projects.html" class="nav-item nav-link">Projects</a>
+                <a href="team.html" class="nav-item nav-link">Team</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- ✅ PREMIUM UPGRADED ABOUT SECTION (FULLY RESPONSIVE + FIXED IMAGES) -->
 <section class="about-section">
     <div class="container">
 
@@ -13,7 +41,7 @@
                     <h3 class="about-title">Who We Are</h3>
                     <p>
                         Nivvayasa Developers & Builders, established in 2023, is one of the fastest-growing
-                        real-estate companies known for trust, transparency, and strong planning. Our pilot 
+                        real estate companies known for trust, transparency, and strong planning. Our pilot 
                         project in Bangalore Rural – Nelamangala, spread across 12+ acres of fully converted 
                         residential land in Sondekoppa, was sold out completely in a record time.
                     </p>
@@ -42,6 +70,7 @@
 </section>
 
 
+<!-- ✅ PREMIUM CSS (no image chopping + luxury design) -->
 <style>
 /* SECTION BACKGROUND */
 .about-section {
@@ -81,7 +110,7 @@
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* GOLDISH GLASS SHINE */
+/* GOLD GLASS SHINE */
 .premium-card::after {
     content: "";
     position: absolute;
@@ -95,7 +124,7 @@
     opacity: 0;
 }
 
-/* HOVER EFFECTS */
+/* HOVER EFFECT */
 .premium-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 14px 40px rgba(0,0,0,0.15);
@@ -107,7 +136,7 @@
     opacity: 1;
 }
 
-/* IMAGE FIX — NO CROPPING */
+/* ✅ IMAGE FIX — NO CROPPING */
 .about-img-wrapper {
     width: 100%;
     max-height: 280px;
@@ -115,11 +144,10 @@
     border-radius: 14px;
 }
 
-/* Smart size without cropping */
 .about-img {
     width: 100%;
     height: auto;
-    object-fit: contain;   /* ✅ prevents chopping */
+    object-fit: contain; /* ✅ prevents cropping */
     background: #f5f5f5;
     border-radius: 14px;
 }
@@ -151,6 +179,9 @@
     }
     .about-title {
         font-size: 24px;
+    }
+    .about-img {
+        object-fit: contain; /* ✅ ensures full image visibility */
     }
 }
 
