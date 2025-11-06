@@ -60,26 +60,52 @@
 }
 
 /* ✅ When menu is CLOSED (default Bootstrap adds .collapsed) */
-.navbar-toggler.collapsed .top-bar {
-  transform: rotate(0) translateY(0);
-}
-.navbar-toggler.collapsed .middle-bar {
-  opacity: 1;
-}
-.navbar-toggler.collapsed .bottom-bar {
-  transform: rotate(0) translateY(0);
+/* ✅ PREMIUM ANIMATED HAMBURGER ICON */
+.navbar-toggler.custom-toggler {
+  border: none !important;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
 }
 
-/* ✅ When menu is OPEN */
-.navbar-toggler:not(.collapsed) .top-bar {
-  transform: rotate(45deg) translateY(9px);
+/* Hamburger Lines */
+.navbar-toggler.custom-toggler .bar {
+  width: 26px;
+  height: 3px;
+  background: linear-gradient(90deg, #d4af37, #f6e27a);
+  border-radius: 4px;
+  transition: all 0.35s ease;
+  display: block;
 }
-.navbar-toggler:not(.collapsed) .middle-bar {
+
+/* ✅ When menu is open (rotate to X) */
+.navbar-toggler.custom-toggler.open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar-toggler.custom-toggler.open .bar:nth-child(2) {
   opacity: 0;
 }
-.navbar-toggler:not(.collapsed) .bottom-bar {
-  transform: rotate(-45deg) translateY(-9px);
+.navbar-toggler.custom-toggler.open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
+
+/* ✅ Soft Gold Pulsing Glow (mobile only) */
+@keyframes pulseGold {
+  0% { box-shadow: 0 0 0 rgba(212,175,55,0.0); }
+  50% { box-shadow: 0 0 12px rgba(212,175,55,0.45); }
+  100% { box-shadow: 0 0 0 rgba(212,175,55,0.0); }
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler.custom-toggler {
+    animation: pulseGold 1.8s infinite ease-in-out;
+    border-radius: 10px;
+  }
+}
+
 
     *{box-sizing:border-box}
     body{
@@ -238,11 +264,10 @@
 </a>
 
 
-    <button class="navbar-toggler custom-toggler collapsed ms-2" type="button" 
-        data-bs-toggle="collapse" data-bs-target="#mainNav">
-  <span class="bar top-bar"></span>
-  <span class="bar middle-bar"></span>
-  <span class="bar bottom-bar"></span>
+ <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
 </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="mainNav">
@@ -547,5 +572,10 @@
       });
     });
   </script>
+  <script>
+document.querySelector('.custom-toggler').addEventListener('click', function(){
+    this.classList.toggle('open');
+});
+</script>
 </body>
 </html>
