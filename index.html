@@ -18,6 +18,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <style>
+
     :root{
       --navy:#08122a;
       --gold:#c19d56;
@@ -32,6 +33,52 @@
   border-radius:6px;
   box-shadow:0 0 6px rgba(255,255,255,0.15);
   object-fit:contain;
+}
+/* ✅ Animated Gold Hamburger – Premium Look */
+.custom-toggler {
+  width: 34px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.custom-toggler:focus {
+  box-shadow: none;
+}
+
+.custom-toggler .bar {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-2));
+  border-radius: 4px;
+  transition: 0.35s ease;
+}
+
+/* ✅ When menu is CLOSED (default Bootstrap adds .collapsed) */
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0) translateY(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0) translateY(0);
+}
+
+/* ✅ When menu is OPEN */
+.navbar-toggler:not(.collapsed) .top-bar {
+  transform: rotate(45deg) translateY(9px);
+}
+.navbar-toggler:not(.collapsed) .middle-bar {
+  opacity: 0;
+}
+.navbar-toggler:not(.collapsed) .bottom-bar {
+  transform: rotate(-45deg) translateY(-9px);
 }
 
     *{box-sizing:border-box}
@@ -191,9 +238,12 @@
 </a>
 
 
-      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon" style="display:block;width:28px;height:2px;background:#fff;position:relative"></span>
-      </button>
+    <button class="navbar-toggler custom-toggler collapsed ms-2" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#mainNav">
+  <span class="bar top-bar"></span>
+  <span class="bar middle-bar"></span>
+  <span class="bar bottom-bar"></span>
+</button>
 
       <div class="collapse navbar-collapse justify-content-end" id="mainNav">
         <ul class="navbar-nav align-items-center">
